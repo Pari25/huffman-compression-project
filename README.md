@@ -1,3 +1,3 @@
 # huffman-compression-project
 
-Project is being completed by engineering three students of IGDTU, Delhi 
+Project is being completed by three students of IGDTU, Delhi.
