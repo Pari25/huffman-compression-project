@@ -1,3 +1,3 @@
 # huffman-compression-project
 
-A project for compressing files using huffman algorithm.
+Project is being completed by engineering three students of IGDTU, Delhi 
