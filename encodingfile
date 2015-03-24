@@ -1,0 +1,44 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main (int argc, char *argv[]) {
+	FILE		*f, *g;
+	char fname[10];
+	int n=10;
+	if (argc != 2) {
+		fprintf (stderr, "Usage: %s <filename>\n", argv[0]);
+		exit (1);
+	}
+
+	f = fopen (argv[1], "r");
+	if (!f) {
+		perror (argv[1]);
+		exit (1);
+	}
+
+
+	sprintf (fname, "%s.huf", argv[1]);
+	g = fopen (fname, "w");
+	if (!g) {
+		perror (fname);
+		exit (1);
+	}
+
+	// fwrite (&n, 1, sizeof (int), g);
+
+	// cout<<&n;
+	fwrite (&n, 4, sizeof (int), g);
+
+	f = fopen (argv[1], "r");
+	if (!f) {
+		perror (argv[1]);
+		exit (1);
+	}
+
+	fclose (f);
+	fclose (g);
+	
+	exit (0);
+}
